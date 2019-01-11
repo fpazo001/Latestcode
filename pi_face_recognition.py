@@ -8,22 +8,22 @@ import imutils #allows for the
 import pickle #read and analyze encoded images
 import time #implement delya
 import cv2 #opencv lib
-import RPi.GPIO as GPIO #GPIO access for LEDs
+#import RPi.GPIO as GPIO #GPIO access for LEDs
 
 #LED PIN OUTPUT DECLARATION
 #testing for face recon, green is face recognized and red is unrecognized
-greenLed=20
-redLed = 21
-GPIO.setmode(GPIO.BCM)
-GPIO.setwarnings(False)
-GPIO.setup(greenLed, GPIO.OUT)
-GPIO.setup(redLed, GPIO.OUT)
+#greenLed=20
+#redLed = 21
+#GPIO.setmode(GPIO.BCM)
+#GPIO.setwarnings(False)
+#GPIO.setup(greenLed, GPIO.OUT)
+#GPIO.setup(redLed, GPIO.OUT)
 
 #LED INIT OFF
-GPIO.output(redLed, GPIO.LOW)
-ledOn = False
-GPIO.output(greenLed, GPIO.LOW)
-ledOn = False
+#GPIO.output(redLed, GPIO.LOW)
+#ledOn = False
+#GPIO.output(greenLed, GPIO.LOW)
+#ledOn = False
  
 # construct the argument parser and parse the arguments
 ap = argparse.ArgumentParser()
@@ -114,12 +114,14 @@ while True:
 		#turn on LED if unknown person
 		for name in names:
 			if name=="Frank":
-				GPIO.output(redLed,GPIO.HIGH)
-				ledOn=True #flag to know if LEDs are on
-				time.sleep(2.0);
-				GPIO.output(redLed,GPIO.LOW)
+				#GPIO.output(redLed,GPIO.HIGH)
+				#ledOn=True #flag to know if LEDs are on
+				#time.sleep(2.0);
+				#GPIO.output(redLed,GPIO.LOW)
 				#redLed=False
 			print(name+"\n")
+				elif name=="Unknown"
+					print(name+"\n")
 		############################  TESTING CODE ########################################################
 
 			
@@ -152,6 +154,5 @@ print("[INFO] approx. FPS: {:.2f}".format(fps.fps()))
  
 # do a bit of cleanup
 cv2.destroyAllWindows()
-GPIO.cleanup()
+#GPIO.cleanup()
 vs.stop()
-
