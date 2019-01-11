@@ -1,0 +1,55 @@
+ python pi_face_recognition.py --cascade haarcascade_frontalface_default.xml \
+        --encodings encodings.pickle
+ python pi_face_recognition.py --cascade haarcascade_frontalface_default.xml \
+        --encodings encodings.pickle
+Instructions on How to run Encoding
+
+Take pictures either manually or write a simple scripts
+	-save inside the datset folder with the person name 
+	-run encodeing
+		to run encoding must use the following terminal line with command
+		line argumnets otherwise it will not run :
+
+		python encode_faces.py --dataset dataset --encodings encodings.pickle \
+         	--detection-method hog
+
+
+	-Once the previous code is run it will create an output file named 
+	 "encodings.pickle",we need this file since it containts the mathematical
+	  data of the pictures we have in our dataset 
+		
+		-NOTE
+		IF NEW USERS OR PICTURES ARE ADDED WE MUST RUN THE ENCODER AGAIN
+		TO INCLUDE NEW DATA 
+
+
+
+
+
+
+
+INSTRUCTIONS ON HOW TO RUN VIDEO-BASED RECOGNITION
+
+Run the following on the terminal ;
+
+	$ python pi_face_recognition.py --cascade haarcascade_frontalface_default.xml \
+	--encodings encodings.pickle
+
+		-Must include the correct encodings.pickle file name 
+		-Must include correct HAARCASCADE, this should be in the same 
+		 directory as the .pickle file and the python executable
+
+		TO RUN FROM SSH MUST TYPE THE FOLLOWING THIS IS IF USING FRAME 
+		and GTK 
+
+		$export DISPLAY=0:
+		
+		then run previous command
+		
+		TO EXIT THE PROGRAM press q on the keyboard this will close the
+		frame
+
+		-SOME CAMERAS ARE INCOMPATIBLE 
+			
+		
+			
