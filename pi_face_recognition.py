@@ -119,9 +119,9 @@ while True:
 				#time.sleep(2.0);
 				#GPIO.output(redLed,GPIO.LOW)
 				#redLed=False
-			print(name+"\n")
-				if name=="Unknown"
-					print(name+"\n")
+				print(name+"\n")
+			if name=="Unknown"
+				print(name+"\n")
 		############################  TESTING CODE ########################################################
 
 			
