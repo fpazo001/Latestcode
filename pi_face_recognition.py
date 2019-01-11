@@ -113,14 +113,14 @@ while True:
 		############################  TESTING CODE ########################################################
 		#turn on LED if unknown person
 		for name in names:
-			if name=="Frank":
+			if name=="Frank" or name == "Ivette":
 				#GPIO.output(redLed,GPIO.HIGH)
 				#ledOn=True #flag to know if LEDs are on
 				#time.sleep(2.0);
 				#GPIO.output(redLed,GPIO.LOW)
 				#redLed=False
 			print(name+"\n")
-				elif name=="Unknown"
+				if name=="Unknown"
 					print(name+"\n")
 		############################  TESTING CODE ########################################################
 
@@ -154,5 +154,5 @@ print("[INFO] approx. FPS: {:.2f}".format(fps.fps()))
  
 # do a bit of cleanup
 cv2.destroyAllWindows()
-#GPIO.cleanup()
+GPIO.cleanup()
 vs.stop()
